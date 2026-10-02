@@ -13,6 +13,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-KFN4D35G');</script>
 <!-- End Google Tag Manager -->
+<!-- Pendo -->
+<script>
+(function(publicAppId){
+    (function(p,e,n,d,o){var v,w,x,y,z;o=p[d]=p[d]||{};o._q=o._q||[];
+    v=['initialize','identify','updateOptions','pageLoad','track','trackAgent'];for(w=0,x=v.length;w<x;++w)(function(m){
+        o[m]=o[m]||function(){o._q[m===v[0]?'unshift':'push']([m].concat([].slice.call(arguments,0)));};})(v[w]);
+        y=e.createElement(n);y.async=!0;y.src='https://cdn.pendo.io/agent/static/'+publicAppId+'/pendo.js';
+        z=e.getElementsByTagName(n)[0];z.parentNode.insertBefore(y,z);})(window,document,'script','pendo');
+
+        // No visitor/account IDs are set, so Pendo assigns an anonymous visitor ID.
+        // Add visitor.id / account.id here (or call pendo.identify) to identify users.
+        pendo.initialize({
+            visitor: {},
+            account: {}
+        });
+})('cc471c52-0942-46f0-8b0d-878c9aedc2e7');
+</script>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
