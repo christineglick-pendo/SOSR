@@ -6,15 +6,15 @@ Guidance for Claude Code (or any future agent) working in this repo.
 
 A static, multi-page boilerplate site used for **testing** (tag managers, form flows, mock auth UI). It is intentionally plain HTML/CSS/JS with no build step, no framework, and no backend.
 
-**It is deliberately not a SPA.** Every tab (`index.html`, `about.html`, `gallery.html`, `pricing.html`, `contact.html`) is a real, separate HTML page with a full page load on navigation — not client-side routing. Keep it that way; adding a router or bundler defeats the purpose of this site.
+**It is deliberately not a SPA.** Every tab (`index.html`, `about.html`, `gallery.html`, `pricing.html`, `checkout.html`) is a real, separate HTML page with a full page load on navigation — not client-side routing. Keep it that way; adding a router or bundler defeats the purpose of this site.
 
 ## Structure
 
-- `index.html`, `about.html`, `gallery.html`, `pricing.html`, `contact.html` — the pages. Each repeats the same header/nav/sign-in-modal markup rather than importing a shared partial (no templating layer by design).
+- `index.html`, `about.html`, `gallery.html`, `pricing.html`, `checkout.html` — the pages. Each repeats the same header/nav/sign-in-modal markup rather than importing a shared partial (no templating layer by design).
 - `css/styles.css` — shared styles, one file for the whole site.
 - `js/main.js` — shared behavior:
-  - Sign-in modal: accepts **any** name/password combination, does not validate, store, or send credentials anywhere. Purely a UI mock for testing auth-adjacent flows.
-  - Contact form submit handler: `preventDefault()`, hides the form, shows a "Thank you" message. No destination/backend is wired up.
+  - Sign-in modal: accepts **any** email/password combination, does not validate, store, or send credentials anywhere. Purely a UI mock for testing auth-adjacent flows.
+  - Checkout form submit handler: `preventDefault()`, hides the form, shows an order confirmation. No destination/backend is wired up.
 - `images/` — local SVG placeholders (hero banner + 4 tiles). No external image hosts are used.
 
 ## Conventions to preserve

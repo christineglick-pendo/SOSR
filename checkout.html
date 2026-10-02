@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout | Test Boilerplate Site</title>
+<link rel="stylesheet" href="css/styles.css">
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KFN4D35G');</script>
+<!-- End Google Tag Manager -->
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFN4D35G"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="site-logo" href="index.html">TestSite</a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="checkout.html" class="active">Checkout</a>
+    </nav>
+    <div class="header-actions">
+      <span id="signin-status"></span>
+      <button id="signin-btn" class="btn btn-secondary" type="button">Sign In</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Checkout</h1>
+    <p>Mock cart checkout for workflow testing. Use made-up numbers only &mdash; nothing is validated, stored, or sent anywhere.</p>
+  </section>
+
+  <section id="cart-summary" class="cart">
+    <h2>Your Cart</h2>
+    <div class="cart-row"><span>Starter Plan (1 month)</span><span>$29.00</span></div>
+    <div class="cart-row"><span>Extra Seat &times; 1</span><span>$9.00</span></div>
+    <div class="cart-row"><span>Tax</span><span>$3.04</span></div>
+    <div class="cart-row cart-total"><span>Total</span><span id="cart-total">$41.04</span></div>
+  </section>
+
+  <form id="checkout-form" novalidate>
+    <h2>Contact</h2>
+    <div class="form-group">
+      <label for="checkout-email">Email address</label>
+      <input type="email" id="checkout-email" name="email" autocomplete="email" required>
+    </div>
+
+    <h2>Payment</h2>
+    <div class="form-group">
+      <label for="checkout-card-name">Name on card</label>
+      <input type="text" id="checkout-card-name" name="card-name" autocomplete="cc-name">
+    </div>
+    <div class="form-group">
+      <label for="checkout-card-number">Credit card number</label>
+      <input type="text" id="checkout-card-number" name="card-number" inputmode="numeric" autocomplete="cc-number" placeholder="4242 4242 4242 4242" required>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="checkout-expiry">Expiry (MM/YY)</label>
+        <input type="text" id="checkout-expiry" name="expiry" autocomplete="cc-exp" placeholder="12/30">
+      </div>
+      <div class="form-group">
+        <label for="checkout-cvc">CVC</label>
+        <input type="text" id="checkout-cvc" name="cvc" inputmode="numeric" autocomplete="cc-csc" placeholder="123">
+      </div>
+    </div>
+
+    <h2>Billing</h2>
+    <div class="form-group">
+      <label for="checkout-address">Billing address</label>
+      <input type="text" id="checkout-address" name="address" autocomplete="street-address">
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="checkout-city">City</label>
+        <input type="text" id="checkout-city" name="city" autocomplete="address-level2">
+      </div>
+      <div class="form-group">
+        <label for="checkout-zip">ZIP / Postal code</label>
+        <input type="text" id="checkout-zip" name="zip" autocomplete="postal-code">
+      </div>
+    </div>
+    <div id="form-error" role="alert">Something went wrong processing your order. Please try again.</div>
+    <button type="submit" class="btn btn-primary">Place Order</button>
+  </form>
+
+  <div id="form-success">Thank you! Your test order has been placed.</div>
+</main>
+
+<footer class="site-footer">
+  &copy; 2026 Test Boilerplate Site. For testing purposes only.
+</footer>
+
+<!-- Sign-in modal (shared across pages) -->
+<div id="signin-overlay" class="modal-overlay">
+  <div class="modal">
+    <button id="signin-close" class="modal-close" type="button" aria-label="Close">&times;</button>
+    <h2>Sign In</h2>
+    <p class="hint">Any email address and password will be accepted for testing purposes.</p>
+    <form id="signin-form">
+      <div class="form-group">
+        <label for="signin-email">Email address</label>
+        <input type="email" id="signin-email" name="email" autocomplete="email" required>
+      </div>
+      <div class="form-group">
+        <label for="signin-password">Password</label>
+        <input type="password" id="signin-password" name="password" autocomplete="current-password" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Sign In</button>
+      <div id="signin-message"></div>
+    </form>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

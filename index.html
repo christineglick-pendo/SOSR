@@ -28,7 +28,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="about.html">About</a>
       <a href="gallery.html">Gallery</a>
       <a href="pricing.html">Pricing</a>
-      <a href="contact.html">Contact</a>
+      <a href="checkout.html">Checkout</a>
     </nav>
     <div class="header-actions">
       <span id="signin-status"></span>
@@ -41,7 +41,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <section class="hero">
     <img src="images/hero.svg" alt="Hero banner placeholder">
     <h1>Welcome to the Test Boilerplate Site</h1>
-    <p>This is a simple multi-page site for QA and tooling tests: tabs, images, a contact form, and a mock sign-in flow.</p>
+    <p>This is a simple multi-page site for QA and tooling tests: tabs, images, a checkout form, and a mock sign-in flow.</p>
   </section>
 
   <section class="card-grid">
@@ -51,11 +51,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <div class="card">
       <h3>Mock Sign-In</h3>
-      <p>The Sign In button opens a modal that accepts any name and password. Nothing is validated, stored, or sent anywhere.</p>
+      <p>The Sign In button opens a modal that accepts any email address and password. Nothing is validated, stored, or sent anywhere.</p>
     </div>
     <div class="card">
-      <h3>Contact Form</h3>
-      <p>The Contact page includes an email field. Submitting shows a thank-you message; no data is sent to a backend.</p>
+      <h3>Checkout Form</h3>
+      <p>The Checkout page is a mock cart with email and credit card fields (fake numbers only). Submitting shows an order confirmation; no data is sent to a backend.</p>
     </div>
   </section>
 </main>
@@ -69,11 +69,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="modal">
     <button id="signin-close" class="modal-close" type="button" aria-label="Close">&times;</button>
     <h2>Sign In</h2>
-    <p class="hint">Any name and password will be accepted for testing purposes.</p>
+    <p class="hint">Any email address and password will be accepted for testing purposes.</p>
     <form id="signin-form">
       <div class="form-group">
-        <label for="signin-name">Name</label>
-        <input type="text" id="signin-name" name="name" autocomplete="username" required>
+        <label for="signin-email">Email address</label>
+        <input type="email" id="signin-email" name="email" autocomplete="email" required>
       </div>
       <div class="form-group">
         <label for="signin-password">Password</label>

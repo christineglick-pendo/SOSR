@@ -4,15 +4,15 @@ A plain multi-page HTML/CSS/JS site for testing (tag managers, form flows, mock 
 
 ## Structure
 
-- `index.html`, `about.html`, `gallery.html`, `pricing.html`, `contact.html` — the five tabs, sharing the same header/nav and sign-in modal markup
+- `index.html`, `about.html`, `gallery.html`, `pricing.html`, `checkout.html` — the five tabs, sharing the same header/nav and sign-in modal markup
 - `css/styles.css` — shared styles
-- `js/main.js` — sign-in modal logic (accepts any name/password, nothing is checked or stored) and the contact form's submit handler
+- `js/main.js` — sign-in modal logic (accepts any email/password, nothing is checked or stored) and the checkout form's submit handler
 - `images/` — a hero banner and four placeholder graphics (local SVGs, no external image hosts)
 
 ## Behavior notes
 
-- **Sign In**: click the button in the header to open a modal with Name + Password fields. Any values are accepted; there is no validation, storage, or network call. Submitting shows "Signed in as {name}" and the button toggles to a signed-in state (client-side only, resets on reload).
-- **Contact form** (`contact.html`): includes a required email field. Submitting has no destination configured — it just hides the form and shows a "Thank you" message.
+- **Sign In**: click the button in the header to open a modal with Email address + Password fields. Any values are accepted; there is no validation, storage, or network call. Submitting shows "Signed in as {email}" and the button toggles to a signed-in state (client-side only, resets on reload).
+- **Checkout form** (`checkout.html`): mock cart with email, card number, expiry, CVC, and billing fields (fake data only). Nothing is validated or sent anywhere — submitting hides the form and shows an order confirmation.
 - **Google Tag Manager**: installed on every page with container `GTM-KFN4D35G` (script in `<head>`, noscript iframe right after `<body>`).
 
 ## Running locally

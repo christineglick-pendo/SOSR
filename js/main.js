@@ -1,5 +1,5 @@
 // Shared boilerplate site behavior: sign-in modal (accepts any credentials,
-// nothing is logged or validated) and contact form submit handler.
+// nothing is logged or validated) and checkout form submit handler.
 
 document.addEventListener("DOMContentLoaded", function () {
   var signinBtn = document.getElementById("signin-btn");
@@ -51,9 +51,9 @@ document.addEventListener("DOMContentLoaded", function () {
   if (signinForm) {
     signinForm.addEventListener("submit", function (event) {
       event.preventDefault();
-      // Test stub: any name/password combination is accepted.
+      // Test stub: any email/password combination is accepted.
       // Nothing here is checked, stored, or sent anywhere.
-      var name = document.getElementById("signin-name").value.trim() || "Guest";
+      var name = document.getElementById("signin-email").value.trim() || "Guest";
 
       signinMessage.textContent = "Signed in as " + name + "!";
       signinMessage.classList.add("visible");
@@ -67,15 +67,23 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Contact form: no destination configured yet, just show a thank-you message.
-  var contactForm = document.getElementById("contact-form");
+  // Checkout form: test stub, no processing. Just show an order confirmation.
+  var checkoutForm = document.getElementById("checkout-form");
   var formSuccess = document.getElementById("form-success");
+  var checkoutError = document.getElementById("form-error");
 
-  if (contactForm) {
-    contactForm.addEventListener("submit", function (event) {
+  if (checkoutForm) {
+    checkoutForm.addEventListener("submit", function (event) {
       event.preventDefault();
-      contactForm.reset();
-      contactForm.style.display = "none";
+      // Test hook: a ZIP of "X" simulates a failed checkout.
+      var zip = document.getElementById("checkout-zip").value.trim();
+      if (zip.toUpperCase() === "X") {
+        checkoutError.classList.add("visible");
+        return;
+      }
+      checkoutError.classList.remove("visible");
+      checkoutForm.reset();
+      checkoutForm.style.display = "none";
       formSuccess.classList.add("visible");
     });
   }
