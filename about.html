@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About | Test Boilerplate Site</title>
+<link rel="stylesheet" href="css/styles.css">
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KFN4D35G');</script>
+<!-- End Google Tag Manager -->
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFN4D35G"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="site-logo" href="index.html">TestSite</a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <span id="signin-status"></span>
+      <button id="signin-btn" class="btn btn-secondary" type="button">Sign In</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>About This Site</h1>
+    <p>This boilerplate exists purely for testing: tag managers, analytics, form flows, and mock authentication UI, without any real backend.</p>
+  </section>
+
+  <section>
+    <h2>What's included</h2>
+    <ul>
+      <li>Five static pages linked via a shared top navigation</li>
+      <li>A handful of placeholder images (see the Gallery tab)</li>
+      <li>A contact form with an email field on the Contact tab</li>
+      <li>A mock Sign In modal available from every page</li>
+      <li>Google Tag Manager installed on every page</li>
+    </ul>
+  </section>
+
+  <section class="card-grid">
+    <div class="card">
+      <h3>No backend</h3>
+      <p>Every interaction here is handled client-side with plain JavaScript. There is nothing to configure or connect.</p>
+    </div>
+    <div class="card">
+      <h3>Not a SPA</h3>
+      <p>Each tab is a real page load, which keeps things simple for tools that expect traditional page navigation.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  &copy; 2026 Test Boilerplate Site. For testing purposes only.
+</footer>
+
+<!-- Sign-in modal (shared across pages) -->
+<div id="signin-overlay" class="modal-overlay">
+  <div class="modal">
+    <button id="signin-close" class="modal-close" type="button" aria-label="Close">&times;</button>
+    <h2>Sign In</h2>
+    <p class="hint">Any name and password will be accepted for testing purposes.</p>
+    <form id="signin-form">
+      <div class="form-group">
+        <label for="signin-name">Name</label>
+        <input type="text" id="signin-name" name="name" autocomplete="username" required>
+      </div>
+      <div class="form-group">
+        <label for="signin-password">Password</label>
+        <input type="password" id="signin-password" name="password" autocomplete="current-password" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Sign In</button>
+      <div id="signin-message"></div>
+    </form>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
